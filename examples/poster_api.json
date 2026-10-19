@@ -1,0 +1,20 @@
+{
+  "1": {
+    "class_type": "MOSSCreateBoundingBoxesLegacy",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "boxes_json": "[{\"x\":0.125,\"y\":0.09375,\"w\":0.75,\"h\":0.125,\"type\":\"text\",\"desc\":\"Large dark-blue uppercase title centered at the top.\",\"text\":\"EXPLORE\",\"palette\":[\"#123456\"]},{\"x\":0.21875,\"y\":0.3125,\"w\":0.5625,\"h\":0.5625,\"type\":\"obj\",\"desc\":\"A flat blue mountain illustration in the lower center.\",\"text\":\"\",\"palette\":[\"#2255AA\"]}]"
+    }
+  },
+  "2": {
+    "class_type": "MOSSImageLayoutPromptLegacy",
+    "inputs": {
+      "prompt": "A minimalist travel poster with a cream background, a blue mountain illustration, and the title EXPLORE at the top.",
+      "element": ["1", 2],
+      "width": ["1", 3],
+      "height": ["1", 4],
+      "character_boxes": ""
+    }
+  }
+}

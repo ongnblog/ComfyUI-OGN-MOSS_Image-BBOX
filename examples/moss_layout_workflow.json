@@ -1,0 +1,202 @@
+{
+  "last_node_id": 2,
+  "last_link_id": 3,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "MOSSCreateBoundingBoxesLegacy",
+      "pos": [
+        120,
+        140
+      ],
+      "size": [
+        820,
+        640
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "background",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": null
+        },
+        {
+          "name": "boxes_json",
+          "type": "STRING",
+          "widget": {
+            "name": "boxes_json"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "preview",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "bboxes",
+          "type": "BOUNDING_BOX",
+          "links": null
+        },
+        {
+          "name": "elements",
+          "type": "ARRAY",
+          "links": [
+            1
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            2
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MOSSCreateBoundingBoxesLegacy"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        "[{\"x\":0.125,\"y\":0.09375,\"w\":0.75,\"h\":0.125,\"type\":\"text\",\"desc\":\"Large dark-blue uppercase title centered at the top.\",\"text\":\"EXPLORE\",\"palette\":[\"#123456\"]},{\"x\":0.21875,\"y\":0.3125,\"w\":0.5625,\"h\":0.5625,\"type\":\"obj\",\"desc\":\"A flat blue mountain illustration in the lower center.\",\"text\":\"\",\"palette\":[\"#2255AA\"]}]"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "MOSSImageLayoutPromptLegacy",
+      "pos": [
+        1040,
+        140
+      ],
+      "size": [
+        400,
+        430
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "element",
+          "type": "ARRAY",
+          "link": 1
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 2
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 3
+        },
+        {
+          "name": "character_boxes",
+          "type": "STRING",
+          "widget": {
+            "name": "character_boxes"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MOSSImageLayoutPromptLegacy"
+      },
+      "widgets_values": [
+        "A minimalist travel poster with a cream background, a blue mountain illustration, and the title EXPLORE at the top.",
+        1024,
+        1024,
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      2,
+      2,
+      0,
+      "ARRAY"
+    ],
+    [
+      2,
+      1,
+      3,
+      2,
+      2,
+      "INT"
+    ],
+    [
+      3,
+      1,
+      4,
+      2,
+      3,
+      "INT"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        0,
+        0
+      ]
+    }
+  },
+  "version": 0.4
+}
